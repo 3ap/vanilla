@@ -26,6 +26,10 @@
 #define htobe32(x) OSSwapHostToBigInt32(x)
 #endif // __APPLE__
 
+#if defined(_WIN32)
+#define htobe32(x) _byteswap_ulong(x)
+#endif
+
 typedef struct
 {
     unsigned magic : 4;
