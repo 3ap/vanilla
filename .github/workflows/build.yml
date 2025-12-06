@@ -11,24 +11,9 @@ jobs:
     strategy:
       matrix:
         platform:
-          - os: linux
-            arch: x86_64
-            artifact: vanilla-linux-x86_64.tar.gz
-          - os: linux
-            arch: aarch64
-            artifact: vanilla-linux-aarch64.tar.gz
           - os: windows
             arch: x86_64
             artifact: vanilla-windows-x86_64.zip
-          - os: android
-            arch: universal
-            artifact: vanilla-android-universal.apk
-          - os: macos
-            arch: universal
-            artifact: vanilla-macos-universal.zip
-          - os: raspberrypi0w
-            arch: armv6l
-            artifact: vanilla-raspberrypi0w-image.zip
     runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@v4
